@@ -6,64 +6,64 @@ import org.junit.Test;
 public class FindMaxNumberTest {
 
     @Test
-    public void givenMaxNumberOfIntegerTypeAt1stPosition_ShouldReturnSameNumber() {
+    public void givenMaxIntegerAt1stPosition_ShouldReturnSameNumber() {
         FindMaxNumber findMaxNumber = new FindMaxNumber();
-        int maxNumber = findMaxNumber.findMaximumOfIntegerType(6,3,4);
-        Assert.assertEquals(6,maxNumber);
+        Integer maxNumber = findMaxNumber.findMax(6,3,1);
+        Assert.assertEquals(6,maxNumber.intValue());
     }
 
     @Test
-    public void givenMaxNumberOfIntegerTypeAt2ndPosition_ShouldReturnSameNumber() {
+    public void givenMaxIntegerAt2ndPosition_ShouldReturnSameNumber() {
         FindMaxNumber findMaxNumber = new FindMaxNumber();
-        int maxNumber = findMaxNumber.findMaximumOfIntegerType(-100,-10,-20);
+        int maxNumber = findMaxNumber.findMax(-100,-10,-20);
         Assert.assertEquals(-10,maxNumber);
     }
 
     @Test
-    public void givenMaxNumberOfIntegerTypeAt3rdPosition_ShouldReturnSameNumber() {
+    public void givenMaxIntegerAt3rdPosition_ShouldReturnSameNumber() {
         FindMaxNumber findMaxNumber = new FindMaxNumber();
-        int maxNumber = findMaxNumber.findMaximumOfIntegerType(1,-5,10);
+        int maxNumber = findMaxNumber.findMax(1,-5,10);
         Assert.assertEquals(10,maxNumber);
     }
 
     @Test
-    public void givenMaxNumberOfFloatTypeAt1stPosition_ShouldReturnSameNumber() {
+    public void givenMaxFloatAt1stPosition_ShouldReturnSameNumber() {
         FindMaxNumber findMaxNumber = new FindMaxNumber();
-        Float maxNumber = findMaxNumber.findMaximumNumberOfFloatType(1.3f,1.2f,1.1f);
+        Float maxNumber = findMaxNumber.findMax(1.3f,1.2f,1.1f);
         Assert.assertEquals(1.3, maxNumber, 0.001);
     }
 
     @Test
-    public void givenMaxNumberOfFloatTypeAt2ndPosition_ShouldReturnSameNumber() {
+    public void givenMaxFloatAt2ndPosition_ShouldReturnSameNumber() {
         FindMaxNumber findMaxNumber = new FindMaxNumber();
-        Float maxNumber = findMaxNumber.findMaximumNumberOfFloatType(-1.6f,-1.58f,-1.59f);
+        Float maxNumber = findMaxNumber.findMax(-1.6f,-1.58f,-1.59f);
         Assert.assertEquals(-1.58, maxNumber, 0.001);
     }
     @Test
-    public void givenMaxNumberOfFloatTypeAt3rdPosition_ShouldReturnSameNumber() {
+    public void givenMaxFloatAt3rdPosition_ShouldReturnSameNumber() {
         FindMaxNumber findMaxNumber = new FindMaxNumber();
-        Float maxNumber = findMaxNumber.findMaximumNumberOfFloatType(-0.1f,-1.1f,0.0f);
+        Float maxNumber = findMaxNumber.findMax(-0.1f,-1.1f,0.0f);
         Assert.assertEquals(0.0, maxNumber, 0.001);
     }
 
     @Test
-    public void givenMaximumAt1stPositionOfStringType_ShouldReturnSameNumber() {
+    public void givenMaxStringAt1stPosition_ShouldReturnSameNumber() {
         FindMaxNumber findMaxNumber = new FindMaxNumber();
-        String maximum = findMaxNumber.findMaximumOfStringType("banana","Banana","Peach");
+        String maximum = findMaxNumber.findMax("banana","Banana","Peach");
         Assert.assertEquals("banana", maximum);
     }
 
     @Test
-    public void givenMaximumAt2ndPositionOfStringType_ShouldReturnSameNumber() {
+    public void givenMaxStringAt2ndPosition_ShouldReturnSameNumber() {
         FindMaxNumber findMaxNumber = new FindMaxNumber();
-        String maximum = findMaxNumber.findMaximumOfStringType("Banana","apple","Peach");
+        String maximum = findMaxNumber.findMax("Banana","apple","Peach");
         Assert.assertEquals("apple", maximum);
     }
 
     @Test
-    public void givenMaximumAt3rdPositionOfStringType_ShouldReturnSameNumber() {
+    public void givenMaxStringAt3rdPosition_ShouldReturnSameNumber() {
         FindMaxNumber findMaxNumber = new FindMaxNumber();
-        String maximum = findMaxNumber.findMaximumOfStringType("Banana","Apple","Peach");
+        String maximum = findMaxNumber.findMax("Banana","Apple","Peach");
         Assert.assertEquals("Peach", maximum);
     }
 }
