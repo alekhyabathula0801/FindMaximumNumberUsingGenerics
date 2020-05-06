@@ -12,12 +12,17 @@ public class Maximum<E extends Comparable> {
         return findMax(values);
     }
 
-    public static <E extends Comparable> E findMax(E[] values) {
+    public <E extends Comparable> E findMax(E[] values) {
         E maximum = values[0];
         for ( int i=1; i < values.length; i++) {
             if (values[i].compareTo(maximum) > 0)
                 maximum = values[i];
         }
+        printMax(maximum);
         return maximum;
+    }
+
+    public <E> void printMax(E max) {
+        System.out.println("Maximum = " +max);
     }
 }
