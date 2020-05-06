@@ -45,4 +45,25 @@ public class FindMaxNumberTest {
         Float maxNumber = findMaxNumber.findMaximumNumberOfFloatType(-0.1f,-1.1f,0.0f);
         Assert.assertEquals(0.0, maxNumber, 0.001);
     }
+
+    @Test
+    public void givenMaximumAt1stPositionOfStringType_ShouldReturnSameNumber() {
+        FindMaxNumber findMaxNumber = new FindMaxNumber();
+        String maximum = findMaxNumber.findMaximumOfStringType("banana","Banana","Peach");
+        Assert.assertEquals("banana", maximum);
+    }
+
+    @Test
+    public void givenMaximumAt2ndPositionOfStringType_ShouldReturnSameNumber() {
+        FindMaxNumber findMaxNumber = new FindMaxNumber();
+        String maximum = findMaxNumber.findMaximumOfStringType("Banana","apple","Peach");
+        Assert.assertEquals("apple", maximum);
+    }
+
+    @Test
+    public void givenMaximumAt3rdPositionOfStringType_ShouldReturnSameNumber() {
+        FindMaxNumber findMaxNumber = new FindMaxNumber();
+        String maximum = findMaxNumber.findMaximumOfStringType("Banana","Apple","Peach");
+        Assert.assertEquals("Peach", maximum);
+    }
 }

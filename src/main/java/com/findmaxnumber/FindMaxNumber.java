@@ -20,4 +20,12 @@ public class FindMaxNumber {
         return maximum;
     }
 
+    public String findMaximumOfStringType(String a, String b, String c) {
+        String maximum = a;
+        if(b.compareTo(maximum) > 0)
+            maximum = b;
+        if(c.compareTo(maximum) > 0)
+            maximum = c;
+        return maximum;
+    }
 }
